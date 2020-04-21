@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Achievement
+
+def AchievementList(request):
+    Achievements = Achievement.objects.filter(visible=True)
+    return render(request, 'slide/AchievementList.html', {'Achievements' : Achievements})
+
+    
