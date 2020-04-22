@@ -1,0 +1,11 @@
+{% for item in achievement_list %}
+    <div>
+        <h1><a href="">{{ item.title }}</a></h1>
+
+        <p>start date : {{ item.start_date }}</p>
+        
+        <p>end date : {{ item.end_date }}</p>
+        
+        <p>{{ item.contents }}</p>
+    </div>
+{% endfor %}

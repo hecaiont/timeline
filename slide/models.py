@@ -9,7 +9,9 @@ class Achievement(models.Model):
     highlight = models.BooleanField(default=False)
     tags = models.TextField(max_length=500, blank=True)
 
+    class Meta:
+        ordering = ['title', 'start_date']
+
     def __str__(self): # show on admin change list
-        # return self.title, self.start_date, self.end_date, self.visible
         return self.title
 
