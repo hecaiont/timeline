@@ -1,3 +1,7 @@
+{% extends "slide/base.html" %} 
+<!-- /templates/APP_NAME/~.html -->
+{% block content %}
+
 {% for item in achievement_list %}
     <div>
         <h1><a href="">{{ item.title }}</a></h1>
@@ -7,5 +11,8 @@
         <p>end date : {{ item.end_date }}</p>
         
         <p>{{ item.contents }}</p>
+        <hr>
     </div>
 {% endfor %}
+
+{% endblock %}
