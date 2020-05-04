@@ -3,16 +3,18 @@
 {% block content %}
 
 {% for item in achievement_list %}
-    <div>
-        <h1><a href="">{{ item.title }}</a></h1>
-
-        <p>start date : {{ item.start_date }}</p>
-        
-        <p>end date : {{ item.end_date }}</p>
-        
-        <p>{{ item.contents }}</p>
-        <hr>
+<div class="card w-75">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">start date : {{ item.start_date }}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">end date : {{ item.end_date }}</h6>
+      <p class="card-text">{{ item.contents }}</p>
+      
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+      <a href="#" class="card-link">Another another link</a>
     </div>
+  </div>
 {% endfor %}
 
 {% endblock %}
