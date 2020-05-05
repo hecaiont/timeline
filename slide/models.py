@@ -2,6 +2,7 @@ from django.db import models
 
 class Achievement(models.Model):
     title = models.CharField(max_length=100)
+    category = models.CharField(max_length=100) # select field
     contents = models.TextField(max_length=500, blank=True)
     start_date = models.DateField(null=True, blank=True)
     end_date = models.DateField(null=True, blank=True)
