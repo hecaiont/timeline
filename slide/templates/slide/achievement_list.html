@@ -3,13 +3,21 @@
 {% block content %}
 
 {% for item in achievement_list %}
-<div class="card w-75">
+<div class="card w-125">
     <div class="card-body">
       <h5 class="card-title">{{ item.title }}</h5>
       <h6 class="card-subtitle mb-2 text-muted">start date : {{ item.start_date }}</h6>
-      <h6 class="card-subtitle mb-2 text-muted">end date : {{ item.end_date }}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">end date : 
+        {% if item.end_date is None %}
+          근무중
+        {% endif %}
+        {% if item.end_date is not None %}
+          {{item.end_date}}
+        {% endif %}
+      </h6>
+      <p class="card-text">{{ item.get_category_display }}</p> 
+      <!-- get_필드명_display -->
       <p class="card-text">{{ item.contents }}</p>
-      
       <a href="#" class="card-link">Card link</a>
       <a href="#" class="card-link">Another link</a>
       <a href="#" class="card-link">Another another link</a>
