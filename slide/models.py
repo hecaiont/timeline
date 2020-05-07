@@ -18,7 +18,6 @@ class Achievement(models.Model):
         ('AD', 'Additional Infomation'),
     )
     category = models.CharField(max_length=2, choices=category_choice)
-    
     contents = models.TextField(max_length=500, blank=True)
     start_date = models.DateField(null=True, blank=True)
     end_date = models.DateField(null=True, blank=True)
