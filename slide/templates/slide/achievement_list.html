@@ -2,13 +2,14 @@
   {% block content %}
 
   {% for item0 in achievement_list %}
-    
+  {% if item0.visible %}
+
     {% ifchanged %}<h4 class="h4">{{ item0.get_category_display }}</h4> 
 
     <hr>
 
       {% for item in achievement_list %}
-      {% if item0.category == item.category and item.visible %}
+      {% if item0.category == item.category %}
         <div class="card w-125">
             <div class="card-body">
               <h5 class="card-title">{{ item.title }}</h5>
@@ -25,6 +26,7 @@
               <a href="#" class="card-link">Card link</a>
               <a href="#" class="card-link">Another link</a>
               <a href="#" class="card-link">Another another link</a>
+              
             </div>
           </div>
           {% endif %}
@@ -35,6 +37,7 @@
 
 
     {% endifchanged %}
+  {% endif %}
   {% endfor %}
 
 {% endblock %}

@@ -1,5 +1,8 @@
 from django.db import models
 
+from taggit.managers import TaggableManager
+
+
 class Achievement(models.Model):
     title = models.CharField(max_length=100)
 
@@ -23,7 +26,7 @@ class Achievement(models.Model):
     end_date = models.DateField(null=True, blank=True)
     visible = models.BooleanField(default=True)
     highlight = models.BooleanField(default=False)
-    tags = models.TextField(max_length=500, blank=True)
+    tags = TaggableManager(blank=True)
 
     class Meta:
         ordering = ['start_date']

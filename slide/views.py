@@ -6,6 +6,3 @@ from .models import Achievement
 
 class AchievementList(ListView):
     model = Achievement
-
-
-    
