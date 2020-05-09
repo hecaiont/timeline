@@ -22,23 +22,52 @@
 
 
     <body>
-        
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-2">Timeline Slide</h1>
-                    <p class="h5 font-weight-light">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-                </div>
+
+        <div class="container">
+
+            <div class="row">
+
+              <div class="col col-sm-2">
+
+                    <div class="well sidebar-nav">
+                        <ul class="nav nav-list">
+                            {% block sidebar %}
+                            {% endblock sidebar %}
+                        </ul>
+                    </div>
+
+              </div>
+
+              <div class="col col-lg">
+
+
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="jumbotron jumbotron-fluid">
+                                <div class="container">
+                                    <h1 class="display-2">Timeline Slide</h1>
+                                    <p class="h5 font-weight-light">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                        {% block content %}
+                        {% endblock content %}
+                        </div>
+                    </div>
+
             </div>
 
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
             </div>
         </div>
+
     </body>
+
 
 
 
