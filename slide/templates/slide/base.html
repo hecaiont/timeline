@@ -24,33 +24,49 @@
     <body>
 
         <div class="container">
+            <div class="row ">
+                <div class="col col-lg-3">
+                    <div class="row">
+                    
+                    <!-- <div class="navbar position-fixed"> -->
+                    <nav class="navbar position-fixed">
 
-            <div class="row">
 
-              <div class="col col-sm-2">
 
-                    <div class="well sidebar-nav">
-                        <ul class="nav nav-list">
-                            {% block sidebar %}
-                            {% endblock sidebar %}
-                        </ul>
+
+
+                        
+                        <div class="card w-25 h-25 border-0">
+                              <img src="{% static 'img/profile.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">Cras justo odio</li>
+                              <li class="list-group-item">Dapibus ac facilisis in</li>
+                              <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                            <div class="card-body">
+                              <a href="#" class="card-link">Card link</a>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- </div> -->
+                        
                     </div>
-
               </div>
 
-              <div class="col col-lg">
-
-
+              <div class="col col-lg-9">
                     <div class="row">
                         <div class="col">
-
                             <div class="jumbotron jumbotron-fluid">
                                 <div class="container">
                                     <h1 class="display-2">Timeline Slide</h1>
                                     <p class="h5 font-weight-light">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -61,9 +77,9 @@
                         </div>
                     </div>
 
-            </div>
+                </div>
 
-            </div>
+            </div>    
         </div>
 
     </body>
