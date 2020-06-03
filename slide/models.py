@@ -34,8 +34,9 @@ class Achievement(models.Model):
     def __str__(self): # show on admin change list
         return self.title
 
+
 class Profile(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(primary_key=True, max_length=100)
     birth = models.DateField(null=True, blank=True)
     
     sex_choice = (
@@ -47,12 +48,12 @@ class Profile(models.Model):
     sex = models.CharField(max_length=2, choices=sex_choice)
     description = models.TextField(max_length=500, blank=True)
 
-    phone = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
+    phone = models.CharField(max_length=100, blank=True)
+    email = models.EmailField(max_length=254, blank=True) 
 
-    instagram = models.CharField(max_length=100)
-    facebook = models.CharField(max_length=100)
-    github = models.CharField(max_length=100)
-    linkedin = models.CharField(max_length=100)
+    instagram = models.URLField(max_length=200, blank=True) 
+    facebook = models.URLField(max_length=200, blank=True) 
+    github = models.URLField(max_length=200, blank=True) 
+    linkedin = models.URLField(max_length=200, blank=True) 
     
     

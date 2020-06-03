@@ -1,7 +1,7 @@
 from django.urls import path
 
-from slide.views import AchievementList
+from slide.views import ResumeView
 
 urlpatterns = [
-    path('', AchievementList.as_view(), name='AchievementList'),
+    path('', ResumeView.as_view(), name='ResumeView'),
 ]
